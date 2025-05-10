@@ -1,0 +1,19 @@
+$base-font-size: 16px;
+$type-scale: 1.250;
+
+@function rem($px) {
+  @return ($px / $base-font-size) * 1rem;
+}
+
+@function type-scale($step) {
+  $size: $base-font-size * pow($type-scale, $step);
+  @return rem($size);
+}
+
+@function pow($base, $exp) {
+  $result: 1;
+  @for $_ from 1 through abs($exp) {
+    $result: if($exp > 0, $result * $base, $result / $base);
+  }
+  @return $result;
+}

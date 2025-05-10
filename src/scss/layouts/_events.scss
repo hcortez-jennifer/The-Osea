@@ -1,0 +1,162 @@
+@use "../abstracts" as a;
+
+.events{
+    &__header{
+        max-width: 40%;
+    }
+}
+
+.events__slider{
+    &__track{
+        height: 90vh;
+        display: grid;
+        grid-template-columns: repeat(3, 80vw);
+        grid-template-rows: 1fr;
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        overflow-x: scroll;
+        scroll-snap-type: both mandatory;
+        scroll-padding: 1rem; 
+    }
+
+    &__card{
+        position: relative;
+        display: inline-block;
+        scroll-snap-align: center;
+        border-radius: a.$primaryBorder;
+        color: var(--black-clr);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        h3{
+            font-weight: 600;
+        }
+
+        .info{
+            @include a.glassmorphism(a.$primaryBorder);
+            width: 100%;
+            max-width: 40%;
+            padding: 1.5em;
+
+            position: absolute;
+            top: 20%;
+            left: 3%;
+        }
+
+        .panel{
+            background-color: var(--light-yellow);
+            border-radius: a.$secondaryBorder;
+            padding: 1.5rem 2rem;
+        }
+
+        .slider__img__container{
+            width: 40%;
+            height: 30vh;
+            border-radius: a.$secondaryBorder;
+            overflow: hidden;
+            position: absolute;
+            right: 3%;
+            bottom: 4%;
+    
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    
+        .slider__vid__container{
+            border-radius: a.$secondaryBorder;
+            overflow: hidden;
+            height: 25vh;
+    
+            position: absolute;
+            top: 4%;
+            right: 3%;
+    
+            video{
+                width: 100%;
+                height: 100%;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.events__slider.active {
+	scroll-snap-type: unset;
+}
+
+.es__card1{
+    background-image: url("/assets/img/bg/slider__bg1.png");
+}
+
+.es__card2{
+    background-image: url("/assets/img/bg/slider__bg2.png");
+}
+
+.es__card3{
+    background-image: url("/assets/img/bg/slider__bg3.png");
+}
+
+@media (max-width: 1199px) {
+    .events__slider{
+        &__track{
+            grid-template-columns: repeat(3, 70vw);
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .events__slider{
+        &__card{
+            .info{
+                max-width: 60%;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .events__slider{
+        &__track{
+            grid-template-columns: repeat(3, 65vw);
+        }
+
+        &__card{
+            .info{
+                max-width: 80%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .events{
+        &__header{
+            max-width: 100%;
+        }
+    }
+
+    .events__slider{
+        &__track{
+            grid-template-columns: repeat(3, 100vw);
+        }
+        
+        &__card{
+            .slider__vid__container{
+                height: 15vh;
+            }
+        }
+    }
+}

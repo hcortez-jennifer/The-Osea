@@ -1,0 +1,44 @@
+@use './variables' as v;
+
+// Glassmorphism
+@mixin glassmorphism ($border) {
+    background: rgba( 244, 213, 216, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 ); 
+    border-radius: $border;
+}
+
+// Carousel background img
+@mixin carouselBackgroundImg($image) {
+    background-image: url($image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: v.$primaryBorder;
+}
+
+// Scroll indicator direction
+$lightBlue: var(--light-blue);
+$black: var(--black-clr);
+
+@mixin scrollDirection($direction: column, $width: 1.5px, $height: 30px, $clr: $black) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+
+    .circle{
+        border: 1.5px solid $clr;
+    }
+
+    .circle.active{
+        background-color: $clr;
+    }
+
+    .line{
+        width: $width;
+        height: $height;
+        background-color: $clr;
+    }
+}

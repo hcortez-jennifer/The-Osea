@@ -1,0 +1,21 @@
+@use '../abstracts/' as a;
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+body{
+    font-family: "Quicksand", sans-serif;
+    color: var(--white-clr);
+}
+
+h1{
+    position: relative;
+    font-size: clamp(2rem, 7vw, a.type-scale(9));
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+h2:not(.navHero h2, .exhibition__cards h2){
+    font-size: a.type-scale(4);
+    font-weight: 600;
+    color: var(--light-blue);
+}

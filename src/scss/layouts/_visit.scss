@@ -1,0 +1,53 @@
+@use "../abstracts" as a;
+
+.visit__content{
+    position: relative;
+    border-top-right-radius: a.$primaryBorder;
+    border-top-left-radius: a.$primaryBorder;
+    overflow: hidden;
+    height: 70vh;
+
+    .row{
+        height: 100%;
+
+        .col-lg-4{
+            background-color: var(--hover-clr);
+        }
+
+        .col-lg-8, .col-md-8{
+            height: 100%;
+        }
+    }
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;  
+        opacity: 0.5;
+    }
+}
+
+.visit__info{
+    position: absolute;
+    width: 100%;
+    max-width: 40%;
+    @include a.glassmorphism(a.$secondaryBorder);
+    padding: 1.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-95%, -50%);
+}
+
+@media (max-width: 991px) {
+    .visit__info{
+        max-width: 60%;
+        transform: translate(-65%, -50%);
+    }
+}
+
+@media (max-width: 767px) {
+    .visit__info{
+        max-width: 80%;
+        transform: translate(-50%, -50%);
+    }
+}
