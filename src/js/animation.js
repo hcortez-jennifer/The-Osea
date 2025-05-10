@@ -1,9 +1,8 @@
-gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
-// =======================================================
-// Animation 
 console.clear(); 
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+    
     // Hero animation
     const heroTl = gsap.timeline({
         scrollTrigger: {
