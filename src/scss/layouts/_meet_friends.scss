@@ -75,7 +75,7 @@
 }
 
 .slide1{
-    @include a.carouselBackgroundImg("/assets/img/bg/carousel__bg1.png");
+    @include a.carouselBackgroundImg("../../assets/img/bg/carousel__bg1.png");
     
     .carousel__content{
         .anemone{
@@ -93,7 +93,7 @@
 }
 
 .slide2{
-    @include a.carouselBackgroundImg("/assets/img/bg/carousel__bg2.png");
+    @include a.carouselBackgroundImg("../../assets/img/bg/carousel__bg2.png");
 
     .carousel__content{
         .cave{
@@ -111,7 +111,7 @@
 }
 
 .slide3{
-    @include a.carouselBackgroundImg("/assets/img/bg/carousel__bg3.png");
+    @include a.carouselBackgroundImg("../../assets/img/bg/carousel__bg3.png");
     color: var(--black-clr);
 
     .carousel__content{
@@ -130,7 +130,7 @@
 }
 
 .slide4{
-    @include a.carouselBackgroundImg("/assets/img/bg/carousel__bg4.png");
+    @include a.carouselBackgroundImg("../../assets/img/bg/carousel__bg4.png");
 
     .carousel__content{
         .rock{
@@ -149,7 +149,7 @@
 }
 
 .slide5{
-    @include a.carouselBackgroundImg("/assets/img/bg/carousel__bg5.png");
+    @include a.carouselBackgroundImg("../../assets/img/bg/carousel__bg5.png");
 
     .coral__reefs{
         width: 70%;

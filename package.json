@@ -1,0 +1,17 @@
+{
+  "name": "the-osea",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch src/scss:dist/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.87.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.6"
+  }
+}
