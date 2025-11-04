@@ -1,0 +1,21 @@
+@use '../abstracts' as a;
+
+.scroll__indicator{
+    @include a.scrollDirection;
+
+    .circle{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+
+    &--mobile{
+        @extend .scroll__indicator;}
+}
+
+@media (max-width: 575px) {
+    .scroll__indicator{
+        @include a.scrollDirection(row, 30px, 1.5px);
+        justify-content: center;
+    }
+}

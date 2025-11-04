@@ -1,2 +1,8 @@
 import * as bootstrap from 'bootstrap';
-import { gsap } from "gsap";
+import { headerAnimation } from './layouts/hero';
+
+console.clear(); 
+
+document.addEventListener("DOMContentLoaded", () => {
+    headerAnimation();
+})

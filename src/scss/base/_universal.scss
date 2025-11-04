@@ -1,0 +1,12 @@
+.container{
+    @media (width <= 991px) {
+        max-width: 960px !important;
+    }
+    @media (width <= 767px) {
+        max-width: 720px !important;
+    }
+
+    @media (width <= 575px) {
+        max-width: 540px !important;
+    }
+}

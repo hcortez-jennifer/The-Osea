@@ -9,6 +9,15 @@
         translate: 2.5px 3.5px;
         box-shadow: 2.5px 3.5px 0 var(--black-clr);
     }
+
+    @media (max-width: 576px) {
+        box-shadow: 3px 4px 0px var(--black-clr);
+
+        &:hover{
+            translate: 1px 2px;
+            box-shadow: 1px 2px 0 var(--black-clr);
+        }
+    }
 }
 
 .info__btn{
