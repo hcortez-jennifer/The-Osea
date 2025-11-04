@@ -1,0 +1,26 @@
+@use '../abstracts' as a;
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Dosis:wght@200..800&family=Quicksand:wght@300..700&display=swap');
+
+body{
+    font-family: "Quicksand", sans-serif;
+    color: var(--black-clr);
+}
+
+h1{
+    font-family: "Baloo 2", sans-serif;
+    font-size: clamp(2rem, 5.5vw + 1rem, 5.938rem);
+    font-weight: a.$fw-750;
+    line-height: 1;
+    text-wrap: balance;
+}
+
+h2{
+    font-weight: a.$fw-600;
+}
+
+// Links
+a{
+    color: var(--black-clr);
+    text-decoration: none;
+}

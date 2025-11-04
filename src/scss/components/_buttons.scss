@@ -1,0 +1,17 @@
+@use '../abstracts' as a;
+
+.cta__primary{
+    @include a.cta;
+    background: var(--pink-accent__100);
+    box-shadow: 4px 5px 0px var(--black-clr);
+
+    &:hover{
+        translate: 2.5px 3.5px;
+        box-shadow: 2.5px 3.5px 0 var(--black-clr);
+    }
+}
+
+.info__btn{
+    @include a.cta;
+    cursor: pointer;
+}
