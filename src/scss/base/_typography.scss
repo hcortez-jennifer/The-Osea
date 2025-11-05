@@ -9,14 +9,24 @@ body{
 
 h1{
     font-family: "Baloo 2", sans-serif;
-    font-size: clamp(2rem, 5.5vw + 1rem, 5.938rem);
+    font-size: clamp(2.8rem, 5.5vw + 1rem, 5.938rem);
     font-weight: a.$fw-750;
     line-height: 1;
     text-wrap: balance;
 }
 
 h2{
+    font-family: "Baloo 2", sans-serif;
+    font-size: clamp(2rem, 5.5vw + 1rem, 3.812rem);
     font-weight: a.$fw-600;
+}
+
+h3{
+    font-weight: a.$fw-600;
+}
+
+p{
+    font-weight: a.$fw-500;
 }
 
 // Links

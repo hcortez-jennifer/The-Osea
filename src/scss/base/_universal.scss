@@ -1,3 +1,11 @@
+body{
+    background-color: var(--primary-clr__400);
+}
+
+section:not(.header){
+    margin-top: 7em;
+}
+
 .container{
     @media (width <= 991px) {
         max-width: 960px !important;

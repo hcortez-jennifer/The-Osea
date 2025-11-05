@@ -22,12 +22,21 @@
     }
 }
 
+// Background img
+@mixin backgroundImg($image, $borderRadius: v.$innerBorder) {
+    background-image: url($image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: $borderRadius;
+}
+
 // Glassmorphism
-@mixin glassmorphism($border: v.$outerBorder) {
+@mixin glassmorphism($borderRadius: v.$outerBorder) {
     background: rgba( 244, 213, 216, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     border: 1px solid rgba( 255, 255, 255, 0.18 ); 
-    border-radius: $border;
+    border-radius: $borderRadius;
 }
 
 // Scroll indicator direction
@@ -48,5 +57,17 @@
         width: $width;
         height: $height;
         background-color: $clr;
+    }
+}
+
+// Panel
+@mixin panelContainer(){
+    @include glassmorphism;
+    padding: v.$outerPadding;
+
+    .inner__panel{
+        background-color: var(--secondary-clr);
+        border-radius: v.$innerBorder;
+        padding: v.$innerPadding;
     }
 }

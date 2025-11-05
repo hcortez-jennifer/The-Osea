@@ -14,10 +14,7 @@
     &__content{
         width: 100%;
         height: 100vh;
-        background-image: url("../../assets/svg/hero_bg.svg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
+        @include a.backgroundImg("../../assets/svg/hero_bg.svg", 0);
     }
 }
 
@@ -71,14 +68,7 @@
 
 .hero__panel__container{
     position: relative;
-    padding-block: a.$outerPaddingBlock;
-    @include a.glassmorphism;
-
-    .hero__panel{
-        background-color: #FFF9C4;
-        border-radius: a.$innerBorder;
-        padding: a.$innerPadding;
-    }
+    @include a.panelContainer;
 }
 
 .hero__panel__details{
