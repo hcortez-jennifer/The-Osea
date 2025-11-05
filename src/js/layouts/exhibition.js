@@ -33,6 +33,13 @@ export function exhibitionAnimation(){
         }
     });
 
+    submarineTl.from(".exhibition__header", {
+        opacity: 0,
+        y: 80,
+        duration: 1,
+        ease: "power2.out"
+    })
+
     segments.forEach(({start, end, card}) => {
         submarineTl.to(".submarine", {
             motionPath: {

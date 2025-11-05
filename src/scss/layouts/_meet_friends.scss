@@ -1,0 +1,175 @@
+@use "../abstracts" as a;
+
+.meet__friends{
+    .scroll__indicator{
+        @include a.scrollDirection(row, 30px, 1.5px);
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+
+.carousel{
+    &__container{
+        margin-bottom: 3em;
+    }
+
+    &__track{
+        position: relative;
+        width: 900px;
+        height: 600px;
+        perspective: 1000px;
+        color: var(--black-clr);
+    }
+
+    &__item{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform-style: preserve-3d;
+        width: 400px;
+        height: 550px;
+        border-radius: 30px;
+        user-select: none;       
+        cursor: grab;            
+        touch-action: pan-y;  
+    }
+
+    &__content{
+        .speech__bubble__text{
+            max-width: 270px;
+            padding: 1em;
+            background-color: var(--secondary-clr);
+            border-radius: a.$innerBorder;
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        }
+
+        .hover__img{
+            position: absolute;
+            width: 30%;
+            transition: transform 0.3s ease;
+            transform-origin: center center;
+        }
+
+        > div:hover .hover__img{
+            transform: scale(2);
+            z-index: 1;
+        }
+    }
+}
+
+.hover__group{
+    .speech__bubble__container{
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease-in-out;
+        transition-delay: 0s;
+    }
+
+    &:hover .speech__bubble__container{
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0s;      
+    }
+
+    .speech__bubble__container{
+        transition-delay: 3s;
+    }
+}
+
+.slide1{
+    @include a.backgroundImg("../../assets/img/bg/carousel__bg1.png");
+    
+    .carousel__content{
+        .anemone{
+            width: 60%;
+            position: absolute;
+            bottom: 15%;
+            left: 15%;
+        }
+
+        .hover__img{
+            left: 30%;
+            bottom: 28%;
+        }
+    }
+}
+
+.slide2{
+    @include a.backgroundImg("../../assets/img/bg/carousel__bg2.png");
+
+    .carousel__content{
+        .cave{
+            width: 70%;
+            position: absolute;
+            bottom: 1%;
+            right: 2%;
+        }
+
+        .hover__img{
+            right: 5%;
+            bottom: 30%;
+        }
+    }
+}
+
+.slide3{
+    @include a.backgroundImg("../../assets/img/bg/carousel__bg3.png");
+
+    .carousel__content{
+        .coral__reef{
+            width: 50%;
+            position: absolute;
+            bottom: 5%;
+            left: 15%;
+        }
+
+        .hover__img{
+            left: 20%;
+            bottom: 12%; 
+        }
+    }
+}
+
+.slide4{
+    @include a.backgroundImg("../../assets/img/bg/carousel__bg4.png");
+
+    .carousel__content{
+        .rock{
+            position: absolute;
+            right: -6%;
+            bottom: -0.5%;
+        }
+
+        .hover__img{
+            width: 50%;
+            right: -5%;
+            bottom: 12%;
+            transform: rotate(50deg);
+        }
+    }
+}
+
+.slide5{
+    @include a.backgroundImg("../../assets/img/bg/carousel__bg5.png");
+
+    .coral__reefs{
+        width: 70%;
+        position: absolute;
+        bottom: -2%;
+        left: 18%;
+    }
+
+    .hover__img{
+        left: 50%;
+        bottom: 15%;
+    }
+}  
+
+@media (width <= 992px) {
+    .carousel{
+        &__track{
+            overflow: hidden;
+        }
+    }
+}
