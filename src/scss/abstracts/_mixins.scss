@@ -23,7 +23,7 @@
 }
 
 // Background img
-@mixin backgroundImg($image, $borderRadius: v.$innerBorder) {
+@mixin backgroundImg($image, $borderRadius: v.$outerBorder) {
     background-image: url($image);
     background-size: cover;
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@
     align-items: center;
 
     .circle{
-        border: $width solid $clr;
+        border: 1.5px solid $clr;
     }
 
     .circle.active{
