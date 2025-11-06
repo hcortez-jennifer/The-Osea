@@ -1,0 +1,52 @@
+@use "../abstracts" as a;
+
+.passport{
+    h3{
+        color: var(--primary-clr__100);
+    }
+}
+
+.passport__step{
+    width: 100%;
+    max-width: 45%;
+
+    .scroll__indicator{
+        @include a.scrollDirection(row, 100%, 1.5px, var(--secondary-clr));
+
+        .circle{
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    p{
+        padding-right: 3em;
+    }
+}
+
+
+@media (width <= 767px) {
+    .passport{
+        &__process{
+            flex-direction: column;
+        }
+    }
+
+    .passport__step{
+        display: flex;
+        gap: 2rem;
+        max-width: 100%; 
+
+        .text{
+            margin-bottom: 1.5em;
+
+            h5{
+                margin-top: 0 !important; 
+            }
+        }
+
+        .scroll__indicator{
+            @include a.scrollDirection(column, 1.5px, 100%);
+        }
+    }
+}
