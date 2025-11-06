@@ -1,0 +1,80 @@
+@use "../abstracts" as a;
+
+.footer{
+    background-color: var(--black-clr);
+    color: var(--white-clr);
+    padding-block: 3.5em 1em;
+
+    p{
+        padding: 0;
+        margin: 0;
+    }
+
+    a{
+        color: var(--white-clr);
+    }
+}
+
+.footer .scroll__indicator{
+    i{
+        font-size: 2rem;
+    }
+
+    .circle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+    }
+
+    .line{
+        width: 5px;
+    }
+}
+
+.footer input{
+    background-color: var(--white-clr);
+    outline: none;
+    cursor: text;
+    font-weight: a.$fw-500;
+}
+
+@media (width <= 991px) {
+    .footer{
+        .mobile__mb{
+            margin-bottom: 3em;
+        }
+
+        .row:nth-of-type(2){
+            .justify-content-between{
+                justify-content: start !important;
+                gap: 1rem;
+            }
+
+            .justify-content-end{
+                justify-content: start !important;
+                margin-top: 1em;
+            }
+        }   
+    }
+
+    .footer .scroll__indicator{
+        @include a.scrollDirection(row, 20px, 5px)
+    }
+}
+
+@media (width <= 575px) {
+    .footer .scroll__indicator{
+        justify-content: start;
+
+        i{
+            font-size: 1.5rem;
+        }
+
+        .circle{
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

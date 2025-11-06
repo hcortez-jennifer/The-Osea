@@ -2,7 +2,7 @@ body{
     background-color: var(--primary-clr__400);
 }
 
-section:not(.header){
+section:not(.header), .footer{
     margin-top: 7em;
 }
 
