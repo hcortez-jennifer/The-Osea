@@ -29,6 +29,11 @@ p{
     font-weight: a.$fw-500;
 }
 
+.caption{
+    color: var(--primary-clr__400);
+    font-weight: a.$fw-700;
+}
+
 // Links
 a{
     color: var(--black-clr);
